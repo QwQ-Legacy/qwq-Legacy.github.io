@@ -38,14 +38,27 @@
   		doc3.style.backgroundColor = color[k];
   		k = (k + 1) % color.length;
 	}
+	
+	var ite = 0;
+	function smallChange() {
+		var color = ["green","blue", "black", "red"];
+
+		var vHeaderT = document.getElementById("headerT");
+  		vHeaderT.style.backgroundColor = color[k];
+  		k = (k + 1) % color.length;
+	}
 	setInterval(change, 1000);
 	setInterval(change1, 500);
 	setInterval(change2, 100);
 	setInterval(change3, 50);
+	
+	setInterval(smallChange, 5000);
   </script>
 </head>
 <body>
-  
+  <div id="headerT" style="width: 100%; height: 25%;"></div>
+  <br>
+  <br>
   <Table>
     <tr>
       <td><div id="case0" style="height: 200px; width: 200px; background-color: coral;"></div></td>
