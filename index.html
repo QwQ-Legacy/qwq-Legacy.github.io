@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Petit Prog Weird Pour Youyou</title>
+  <link rel="icon" href="https://media.discordapp.net/attachments/636265825812348946/948646509027655771/570372904286420994.png">
+  <script>
+	var i = 0;
+	var j = 0;
+	var h = 0;
+	var k = 0;
+	function change() {
+  		var doc = document.getElementById("case0");
+  		var color = ["black", "blue", "brown", "green", "coral"];
+  		doc.style.backgroundColor = color[i];
+  		i = (i + 1) % color.length;
+	}
+
+	function change1() {
+  		var color = ["blue", "black", "brown", "coral", "green"];
+		
+		var doc1 = document.getElementById("case1");
+  		doc1.style.backgroundColor = color[j];
+  		j = (j + 1) % color.length;
+	}
+
+	function change2() {
+  		var color = ["green", "coral", "black", "blue", "brown"];
+		var doc2 = document.getElementById("case2");
+  		doc2.style.backgroundColor = color[h];
+  		h = (h + 1) % color.length;
+	}
+
+	function change3() {
+		var color = ["green", "brown", "blue", "black", "coral"];
+
+		var doc3 = document.getElementById("case3");
+  		doc3.style.backgroundColor = color[k];
+  		k = (k + 1) % color.length;
+	}
+	setInterval(change, 1000);
+	setInterval(change1, 500);
+	setInterval(change2, 100);
+	setInterval(change3, 50);
+  </script>
+</head>
+<body>
+  
+  <Table>
+    <tr>
+      <td><div id="case0" style="height: 200px; width: 200px; background-color: coral;"></div></td>
+      <td><div id="case1" style="height: 200px; width: 200px"></div></td>
+    </tr>
+    <tr>
+      <td><div id="case2" style="height: 200px; width: 200px"></div></td>
+      <td><div id="case3" style="height: 200px; width: 200px"></div></td>
+    </tr>
+  </Table>
+</body>
+</html>
