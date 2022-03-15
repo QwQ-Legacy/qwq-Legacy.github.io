@@ -25,7 +25,36 @@
 	var j = 0;
 	var h = 0;
 	var k = 0;
-	function change() {
+	// les listes de couleur
+	var color0 = ["black", "blue", "brown", "green", "coral"];
+	var color1 = ["blue", "black", "brown", "coral", "green"];
+	var color2 = ["green", "coral", "black", "blue", "brown"];
+	var color3 = ["green", "brown", "blue", "black", "coral"];
+	var colorSmallChange = ["#00804d","#0059b3", "#595959", "#b11226"];
+	// les cases
+	var case0 = "case0";
+	var case1 = "case1";
+	var case2 = "case2";
+	var case3 = "case3";
+	var headerT = "headerT";
+	  
+	// fonction qui change la couleur d'un élément
+	function change(listeCouleur, laCase) {
+  		var doc = document.getElementById(laCase);
+  		var color = listeCouleur;
+  		doc.style.backgroundColor = color[i];
+  		i = (i + 1) % color.length;
+	}
+	  
+	// appel de la fonction à chaque...
+	setInterval(function() { change(color0, case0); }, 1000);
+	setInterval(function() { change(color1, case1); }, 500);
+	setInterval(function() { change(color2, case2); }, 100);
+	setInterval(function() { change(color3, case3); }, 50);
+	
+	setInterval(function() { change(colorSmallChange, headerT); }, 5000);
+	  
+	/*function change() {
   		var doc = document.getElementById("case0");
   		var color = ["black", "blue", "brown", "green", "coral"];
   		doc.style.backgroundColor = color[i];
@@ -68,7 +97,7 @@
 	setInterval(change2, 100);
 	setInterval(change3, 50);
 	
-	setInterval(smallChange, 5000);
+	setInterval(smallChange, 5000);*/
   </script>
 </head>
 <body style="margin: 0;">
